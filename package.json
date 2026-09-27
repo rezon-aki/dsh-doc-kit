@@ -1,0 +1,35 @@
+{
+  "name": "dsh-doc-kit",
+  "version": "0.1.0",
+  "description": "文档体系体检：注册 doc_lint 工具（索引路径 / 注入层配额 / 被禁段落 / 是否进 git），并随包分发 doc-governance 技能。只读、零依赖、无 UI。",
+  "type": "module",
+  "main": "./lib/index.js",
+  "files": [
+    "lib",
+    "skills",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "docs",
+    "lint"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.1.5-rc.1"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

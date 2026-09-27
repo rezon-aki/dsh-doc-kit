@@ -1,0 +1,6 @@
+# dsh-doc-kit bundle patch：把 host 行插进 profile 的插件 roster。
+# 宿主半区只注册一个只读工具 doc_lint（无 client、无 LLM、无定时器）。
+# 用 `dsh plugin --profile web add <路径>` 安装后本层自动生效；不要再手动 insert 同一 id。
+- insert:
+    - id: dsh-doc-kit
+      name: 'dsh-doc-kit'
